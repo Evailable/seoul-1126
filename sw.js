@@ -1,6 +1,6 @@
-// Offline cache for the Seoul guide (GitHub Pages). 524f01124a changes on every build,
+// Offline cache for the Seoul guide (GitHub Pages). 30e7ab9dd4 changes on every build,
 // which makes the browser install the new worker, re-cache, and drop the old cache.
-const CACHE = 'seoul-524f01124a';
+const CACHE = 'seoul-30e7ab9dd4';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
